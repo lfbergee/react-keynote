@@ -10,6 +10,8 @@ import App from "./App";
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Ubuntu Light";
+    height: 100%;
+    overflow: hidden;
   }
 `;
 
