@@ -8,6 +8,12 @@ const getDot = dot => {
       return "'❤️'";
     case "skull":
       return "'☠️'";
+    case "puke":
+      return "'🤮'";
+    case "angry":
+      return "'🤬'";
+    case "down":
+      return "'👎'";
     default:
       return "'⚡'";
   }

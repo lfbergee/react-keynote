@@ -5,6 +5,7 @@ export {
   ActionButton,
   ScrollButton,
   IconButton,
-  RouterButton
+  RouterButton,
+  PrimaryButton,
 } from "./buttons/ActionButton";
 export { List, ListItem } from "./list/List";

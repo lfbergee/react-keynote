@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AnimateOnChange } from "@nearform/react-animation";
-import { GridRow, GridCol } from "../../../baseComponents";
+import { GridRow, GridCol, PrimaryButton } from "../../../baseComponents";
 import Old from "./Old";
 import New from "./New";
 
@@ -32,13 +32,13 @@ const Example = React.memo(() => {
               <h1>{timesRendered}</h1>
             </AnimateOnChange>
             <hr />
-            <button
+            <PrimaryButton
               onClick={() => {
                 increment(clickCount + 1);
               }}
             >
               <h2>Render</h2>
-            </button>
+            </PrimaryButton>
           </ParentWrapper>
         </GridCol>
       </GridRow>
