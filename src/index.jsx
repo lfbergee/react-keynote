@@ -10,7 +10,7 @@ import { FullScreenSpinner } from "./components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "Helvetica Neue", "Ubuntu Light";
+    font-family: "Helvetica Neue", "Ubuntu Light", "sans-serif";
     height: 100%;
     overflow: hidden;
     background-color: #090909;
@@ -35,7 +35,7 @@ const Routes = () => (
 );
 
 const Navigation = () => (
-  <HashRouter>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes />
   </HashRouter>
 );
