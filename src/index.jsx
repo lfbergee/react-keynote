@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { Normalize } from "styled-normalize";
 import theme from "./utils/theme";
 import App from "./App";
@@ -35,9 +35,9 @@ const Routes = () => (
 );
 
 const Navigation = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 const render = () => {

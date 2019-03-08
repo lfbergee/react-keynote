@@ -2,8 +2,10 @@
   "name": "playground",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lfbergee.github.io/playground",
   "dependencies": {
     "@nearform/react-animation": "^1.0.6",
+    "gh-pages": "^2.0.1",
     "immer": "^2.1.0",
     "react": "^16.8.3",
     "react-app-rewire-hot-loader": "^2.0.1",
@@ -21,7 +23,9 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+    "test": "react-app-rewired test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
