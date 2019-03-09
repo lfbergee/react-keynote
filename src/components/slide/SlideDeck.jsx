@@ -1,14 +1,14 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import produce from "immer";
 import { AnimateOnChange } from "@nearform/react-animation";
 import {
   ActionButtonGroup,
-  NavButtonGroup,
-  ActionButton,
   ScrollButton,
   IconButton,
 } from "../../baseComponents";
 import ProgressBar from "./SlideProgress";
+import PresenterNavigation from "./PresenterNavigation";
+import PresenterView from "./PresenterView";
 
 const reducer = produce((draft, action) => {
   switch (action.type) {
@@ -32,6 +32,8 @@ const reducer = produce((draft, action) => {
 
 const SlideDeck = ({ namedNav, children }) => {
   const slides = children.map(child => child.props.name).filter(n => n);
+
+  const [presenterMode, updatePresenterMode] = useState(false);
   const [state, dispatch] = useReducer(reducer, {
     activeSlide: 0,
     max: slides.length,
@@ -94,13 +96,20 @@ const SlideDeck = ({ namedNav, children }) => {
 
   return (
     <>
-      <NavButtonGroup>
-        <ActionButton to="/">
-          <span role="img" aria-label="home">
-            🏠
-          </span>
-        </ActionButton>
-      </NavButtonGroup>
+      {!presenterMode && (
+        <PresenterNavigation
+          presenterMode={presenterMode}
+          updatePresenterMode={updatePresenterMode}
+        />
+      )}
+      {presenterMode && (
+        <PresenterView
+          presenterMode={presenterMode}
+          updatePresenterMode={updatePresenterMode}
+          activeSlide={state.activeSlide}
+          slides={children}
+        />
+      )}
       <AnimateOnChange animationIn="fadeIn">
         {children.map((child, idx) =>
           state.activeSlide === idx ? child : null

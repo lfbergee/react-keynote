@@ -3,8 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { List, ListItem } from "../../baseComponents";
 import { Slide, SlideDeck } from "../../components";
-import { code } from "./example/code";
-import Example from "./example/Example";
+import { usestate, usecontext, useeffect, customhook } from "./example/code";
+import Separation from "./example/separation.png";
 
 const Hooks = () => (
   <SlideDeck>
@@ -20,9 +20,14 @@ const Hooks = () => (
     </Slide>
     <Slide name="example" heading="Example" withImage>
       <SyntaxHighlighter language="jsx" style={okaidia}>
-        {code}
+        {usestate}
       </SyntaxHighlighter>
-      <Example />
+      <SyntaxHighlighter language="jsx" style={okaidia}>
+        {usecontext}
+      </SyntaxHighlighter>
+      <SyntaxHighlighter language="jsx" style={okaidia}>
+        {useeffect}
+      </SyntaxHighlighter>
     </Slide>
     <Slide name="summary" heading="Hooks" withImage>
       <List>
@@ -30,6 +35,9 @@ const Hooks = () => (
         <ListItem customDot="fire">Better separation of concern</ListItem>
         <ListItem customDot="fire">Easier to share state logic</ListItem>
       </List>
+    </Slide>
+    <Slide name="separation" heading="Separation of concern">
+      <img alt="" src={Separation} />
     </Slide>
     <Slide name="donts" heading="Hooks dont's" withImage>
       <List>
@@ -39,11 +47,33 @@ const Hooks = () => (
         <ListItem customDot="skull">
           Do not replace ComponentWillCatch... yet
         </ListItem>
+        <ListItem customDot="skull">
+          or getSnapshotBeforeUpdate, but who uses that anyway?
+        </ListItem>
         <ListItem customDot="skull">Rewrite all old components...</ListItem>
         <ListItem customDot="fire">
           Just remember to add hooks-eslint-plugin, and you be fine!
         </ListItem>
       </List>
+    </Slide>
+    <Slide name="how" heading="Hooks note" withImage>
+      <List>
+        <ListItem customDot>Each hook scoped to the component</ListItem>
+        <ListItem customDot>
+          Use context or prop drilling to share state, as you'd expect
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide name="custom" heading="🔥🔥 Custom hooks 🔥🔥" withImage>
+      <List>
+        <ListItem customDot="fire">
+          Where it really becomes cool is custom hooks
+        </ListItem>
+        <ListItem customDot="heart">https://usehooks.com</ListItem>
+      </List>
+      <SyntaxHighlighter language="jsx" style={okaidia}>
+        {customhook}
+      </SyntaxHighlighter>
     </Slide>
   </SlideDeck>
 );
