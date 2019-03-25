@@ -7,5 +7,6 @@ export {
   IconButton,
   RouterButton,
   PrimaryButton,
+  LinkButton,
 } from "./buttons/ActionButton";
 export { List, ListItem } from "./list/List";

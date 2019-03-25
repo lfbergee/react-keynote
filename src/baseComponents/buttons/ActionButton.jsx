@@ -49,6 +49,15 @@ export const PrimaryButton = styled.button`
   background-color: transparent;
 `;
 
+export const LinkButton = styled.a`
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+  color: yellowgreen;
+  padding: 12px;
+  margin: 12px;
+  background-color: transparent;
+`;
+
 export const IconButton = styled(ScrollButton)`
   padding: 4px 18px;
   font-size: 18px;

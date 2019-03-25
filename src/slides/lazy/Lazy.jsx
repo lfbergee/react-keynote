@@ -1,7 +1,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { List, ListItem } from "../../baseComponents";
+import { List, ListItem, LinkButton } from "../../baseComponents";
 import { Slide, SlideDeck } from "../../components";
 import { code } from "./example/code";
 import Example from "./example/Example";
@@ -34,6 +34,18 @@ const Lazy = () => (
         </ListItem>
         <ListItem customDot="skull">
           Doesn't work with server side rendering
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide name="resources" heading="Resources">
+      <List>
+        <ListItem customDot="fire">
+          <LinkButton href="https://reactjs.org/docs/code-splitting.html#reactlazy">
+            Documentation
+          </LinkButton>
+          <LinkButton href="https://hackernoon.com/lazy-loading-and-preloading-components-in-react-16-6-804de091c82d">
+            Detailed blog post
+          </LinkButton>
         </ListItem>
       </List>
     </Slide>
