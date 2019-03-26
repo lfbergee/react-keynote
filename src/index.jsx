@@ -4,8 +4,10 @@ import { AppContainer } from "react-hot-loader";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
 import { Normalize } from "styled-normalize";
+import styled from "styled-components";
 import theme from "./utils/theme";
 import App from "./App";
+import logo from "./logo.png";
 import { FullScreenSpinner } from "./components";
 
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +17,17 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     background-color: #090909;
   }
+`;
+
+const Logo = styled.div`
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  background: url(${logo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
 `;
 
 const Intro = React.lazy(() => import("./slides/intro/Intro"));
@@ -51,6 +64,7 @@ const render = () => {
     <AppContainer>
       <>
         <Normalize />
+        <Logo />
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyle whiteColor />
