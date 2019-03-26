@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { GridCol, GridRow } from "../../baseComponents";
 import bg from "./bg.jpg";
+import logo from "./logo.png";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -25,8 +26,20 @@ const Header = styled.h1`
   margin: 68px 12px 24px;
 `;
 
+const Logo = styled.div`
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  background: url(${logo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+`;
+
 const Slide = ({ heading, withImage, name, children }) => (
   <Wrapper name={name} withImage={withImage}>
+    <Logo />
     <Content>
       <GridRow>
         <GridCol size={12}>
