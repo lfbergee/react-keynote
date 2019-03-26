@@ -14,6 +14,8 @@ const getDot = dot => {
       return "'🤬'";
     case "down":
       return "'👎'";
+    case "seeNoEvil":
+      return "'🙈'";
     default:
       return "'⚡'";
   }

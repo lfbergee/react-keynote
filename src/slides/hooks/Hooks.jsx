@@ -1,9 +1,9 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { List, ListItem } from "../../baseComponents";
+import { List, ListItem, LinkButton } from "../../baseComponents";
 import { Slide, SlideDeck } from "../../components";
-import { usestate, usecontext, useeffect, customhook } from "./example/code";
+import { usestate, usecontext, useeffect } from "./example/code";
 import Separation from "./example/separation.png";
 
 const Hooks = () => (
@@ -64,16 +64,17 @@ const Hooks = () => (
         </ListItem>
       </List>
     </Slide>
-    <Slide name="custom" heading="🔥🔥 Custom hooks 🔥🔥" withImage>
+    <Slide name="resources" heading="Resources">
       <List>
         <ListItem customDot="fire">
-          Where it really becomes cool is custom hooks
+          <LinkButton href="https://reactjs.org/docs/hooks-intro.html">
+            Documentation
+          </LinkButton>
+          <LinkButton href="https://overreacted.io/a-complete-guide-to-useeffect/">
+            The complete guide to useEffect
+          </LinkButton>
         </ListItem>
-        <ListItem customDot="heart">https://usehooks.com</ListItem>
       </List>
-      <SyntaxHighlighter language="jsx" style={okaidia}>
-        {customhook}
-      </SyntaxHighlighter>
     </Slide>
   </SlideDeck>
 );

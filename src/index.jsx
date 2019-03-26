@@ -17,20 +17,26 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Intro = React.lazy(() => import("./slides/intro/Intro"));
 const Hooks = React.lazy(() => import("./slides/hooks/Hooks"));
 const Lazy = React.lazy(() => import("./slides/lazy/Lazy"));
 const Memo = React.lazy(() => import("./slides/memo/Memo"));
 const Profiling = React.lazy(() => import("./slides/profiling/Profiling"));
 const Immer = React.lazy(() => import("./slides/immer/Immer"));
+const CustomHooks = React.lazy(() =>
+  import("./slides/customHooks/CustomHooks")
+);
 
 const Routes = () => (
   <Suspense fallback={<FullScreenSpinner />}>
     <Route exact path="/" render={() => <App />} />
+    <Route exact path="/intro" render={() => <Intro />} />
     <Route exact path="/memo" render={() => <Memo />} />
     <Route exact path="/lazy" render={() => <Lazy />} />
     <Route exact path="/profiling" render={() => <Profiling />} />
     <Route exact path="/hooks" render={() => <Hooks />} />
     <Route exact path="/Immer" render={() => <Immer />} />
+    <Route exact path="/custom-hooks" render={() => <CustomHooks />} />
   </Suspense>
 );
 

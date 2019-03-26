@@ -43,11 +43,11 @@ const Example = React.memo(() => {
         </GridCol>
       </GridRow>
       <GridRow justify="center">
-        <GridCol size={3}>
+        <GridCol size={3} display="flex" justify="center">
           <Old />
         </GridCol>
         <GridCol size={1} />
-        <GridCol size={3}>
+        <GridCol size={3} display="flex" justify="center">
           <New />
         </GridCol>
       </GridRow>
