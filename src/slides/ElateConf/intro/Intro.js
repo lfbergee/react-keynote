@@ -1,6 +1,6 @@
 import React from "react";
-import { List, ListItem } from "../../baseComponents";
-import { Slide, SlideDeck } from "../../components";
+import { List, ListItem } from "../../../baseComponents";
+import { Slide, SlideDeck } from "../../../components";
 
 const Intro = () => (
   <SlideDeck>

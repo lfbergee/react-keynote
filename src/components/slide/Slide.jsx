@@ -10,9 +10,9 @@ const Wrapper = styled.section`
   overflow: hidden;
   background-image: ${props => (props.withImage ? `url(${bg})` : "")};
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${({ backgroundColor }) => backgroundColor};
   background-blend-mode: darken;
-  color: ${props => props.theme.colors.white};
+  color: ${props => (props.color ? props.color : props.theme.colors.white)};
 `;
 
 const Content = styled.div`
@@ -25,8 +25,20 @@ const Header = styled.h1`
   margin: 68px 12px 24px;
 `;
 
-const Slide = ({ heading, withImage, name, children }) => (
-  <Wrapper name={name} withImage={withImage}>
+const Slide = ({
+  heading,
+  withImage,
+  name,
+  children,
+  backgroundColor,
+  color,
+}) => (
+  <Wrapper
+    name={name}
+    withImage={withImage}
+    backgroundColor={backgroundColor}
+    color={color}
+  >
     <Content>
       <GridRow>
         <GridCol size={12}>
@@ -39,5 +51,9 @@ const Slide = ({ heading, withImage, name, children }) => (
     </Content>
   </Wrapper>
 );
+
+Slide.defaultProps = {
+  backgroundColor: "rgba(0,0,0,0.8)",
+};
 
 export default Slide;

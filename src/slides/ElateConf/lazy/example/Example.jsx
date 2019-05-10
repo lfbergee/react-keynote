@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState } from "react";
-import { GridRow, GridCol, PrimaryButton } from "../../../baseComponents";
-import { Spinner } from "../../../components";
+import { GridRow, GridCol, PrimaryButton } from "../../../../baseComponents";
+import { Spinner } from "../../../../components";
 
 const SomeComp = lazy(() => import("./SomeComp"));
 

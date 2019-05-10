@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AnimateOnChange } from "@nearform/react-animation";
-import { GridRow, GridCol, PrimaryButton } from "../../../baseComponents";
+import { GridRow, GridCol, PrimaryButton } from "../../../../baseComponents";
 import Old from "./Old";
 import New from "./New";
 

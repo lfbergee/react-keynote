@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimateOnChange } from "@nearform/react-animation";
-import { PrimaryButton } from "../../../baseComponents";
+import { PrimaryButton } from "../../../../baseComponents";
 
 let timesRendered = 0;
 

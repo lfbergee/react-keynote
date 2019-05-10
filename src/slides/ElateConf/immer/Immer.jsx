@@ -1,8 +1,8 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Slide, SlideDeck } from "../../components";
-import { List, ListItem, LinkButton } from "../../baseComponents";
+import { Slide, SlideDeck } from "../../../components";
+import { List, ListItem, LinkButton } from "../../../baseComponents";
 import { mutating } from "./example/mutating";
 import { immutable, reduxNoImmer, thisProject } from "./example/immutable";
 
