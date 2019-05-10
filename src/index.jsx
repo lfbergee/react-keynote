@@ -24,6 +24,9 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: 6rem;
   }
+  pre {
+    font-size: 2.8rem;
+  }
 `;
 
 const Routes = () => (

@@ -39,9 +39,13 @@ const Intro = () => (
     <Slide name="agenda2" withImage>
       <GridRow justify="center">
         <GridCol>
-          <List>
-            <ListItem customDot="heart">Spør spør spør</ListItem>
-          </List>
+          <Hard>
+            <List>
+              <ListItem customDot="heart">Spør</ListItem>
+              <ListItem customDot="heart">Grav</ListItem>
+              <ListItem customDot="heart">Osv</ListItem>
+            </List>
+          </Hard>
         </GridCol>
       </GridRow>
     </Slide>
@@ -57,7 +61,7 @@ const Intro = () => (
         vanskelig
       </Hard>
     </Slide>
-    <Slide name="jsx" withImage heading="JSX">
+    <Slide name="jsx" withImage>
       <Jsx />
     </Slide>
     <Slide name="jsx1" withImage heading="JSX">

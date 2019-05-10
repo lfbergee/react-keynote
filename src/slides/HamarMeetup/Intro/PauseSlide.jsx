@@ -7,24 +7,77 @@ const flicker = keyframes`
   0% {
     filter: brightness(1);
   }
-50% {
+  
+  1% {
     filter: brightness(0.9);
-
-}
+  }
+  
+  5% {
+    filter: brightness(1);
+  }
+  
+  7% {
+    filter: brightness(0.7);
+  }
+  
+  15% {
+    filter: brightness(1);
+  }
+  
+  16% {
+    filter: brightness(0.5);
+  }
+  
+  20% {
+    filter: brightness(0.95);
+  }
+  
+  22% {
+    filter: brightness(0.9);
+  }
+  
+  30% {
+    filter: brightness(1);
+  }
+  
+  35% {
+    filter: brightness(1);
+  }
+  
+  50% {
+    filter: brightness(0.8);
+  }
+  
+  60% {
+    filter: brightness(1);
+  }
+  
+  64% {
+    filter: brightness(1);
+  }
+  
+  70% {
+    filter: brightness(0.6);
+  }
+  
+  85% {
+    filter: brightness(0.5);
+  }
+  
   100% {
     filter: brightness(1);
   }
 `;
 
-const Image = styled.img`
-  animation: ${flicker} 2s linear infinite;
+const FlickeringImage = styled.img`
+  animation: ${flicker} 10s linear infinite;
 `;
 
 const PauseSlide = () => {
   return (
     <GridRow justify="center">
       <GridCol>
-        <Image src={logo} alt="logo" />
+        <FlickeringImage src={logo} alt="logo" />
       </GridCol>
     </GridRow>
   );
