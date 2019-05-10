@@ -28,7 +28,11 @@ const Jsx2 = () => (
 React.createElement(
   'div',
   { className: 'cn' },
-  ['Content 1!', React.createElement('br'), 'Content 2!']
+  [
+    'Content 1!',
+    React.createElement('br'),
+    'Content 2!'
+  ]
 )`}
         </SyntaxHighlighter>
       </GridCol>

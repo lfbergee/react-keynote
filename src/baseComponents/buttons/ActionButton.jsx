@@ -25,9 +25,9 @@ export const NavButtonGroup = styled(ButtonGroup)`
 
 export const ActionButton = styled(Router)`
   border: none;
-  font-size: 24px;
-  padding: 12px;
-  margin: 4px;
+  font-size: 2.2rem;
+  padding: 0.8rem;
+  margin: 0.4rem;
   background-color: transparent;
 `;
 
@@ -60,7 +60,7 @@ export const LinkButton = styled.a`
 
 export const IconButton = styled(ScrollButton)`
   padding: 4px 18px;
-  font-size: 18px;
+  font-size: 2rem;
   border: none;
 `;
 
@@ -71,5 +71,5 @@ export const RouterButton = styled(Router)`
   padding: 12px;
   margin: 12px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 2rem;
 `;

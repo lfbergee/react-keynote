@@ -6,12 +6,15 @@ import me from "./me.jpg";
 
 const Card = styled.div`
   overflow: hidden;
-  border: 8px solid yellow;
+  border: 8px solid #f0db4f;
   border-radius: 4px;
   height: 600px;
   width: 400px;
   background-color: peachpuff;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: ${({ flipped }) =>
+    flipped
+      ? "-10px 10px 5px 0px rgba(0, 0, 0, 0.75)"
+      : "10px 10px 5px 0px rgba(0, 0, 0, 0.75)"};
   transition: transform 0.6s;
   transform-style: preserve-3d;
   background-image: url(${bg});
@@ -57,6 +60,7 @@ const Title = styled.div`
 `;
 
 const Star = styled.div`
+  font-size: 20px;
   z-index: 1;
   background: yellowgreen;
   width: 80px;
@@ -86,9 +90,10 @@ const Developer = styled.aside`
   height: 40px;
   width: 80px;
   text-align: center;
-  transform: rotate(-7deg);
-  color: yellow;
+  transform: rotate(-5deg);
+  color: #f0db4f;
   font-weight: bolder;
+  font-size: 1.7rem;
   text-shadow: 0 0 3px #ff0000;
 `;
 
@@ -97,9 +102,9 @@ const Box = styled.div`
   color: white;
   position: absolute;
   bottom: -25px;
-  left: -20px;
-  width: 110%;
-  transform: rotate(-7deg);
+  left: -26px;
+  width: 115%;
+  transform: rotate(-5deg);
   padding-bottom: 35px;
 `;
 
@@ -116,62 +121,51 @@ const Me = styled.div`
   background-repeat: no-repeat;
 `;
 
-const FunFact = styled.aside`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  color: yellow;
-  font-weight: bolder;
-  text-shadow: 0 0 3px #ff0000;
-  background-color: rgba(0, 0, 0, 0.8);
+const Scale = styled.div`
+  transform: scale(1.4);
+  margin-top: 100px;
+`;
+
+const Content = styled.div`
+  width: 415px;
 `;
 
 const PlayCard = () => {
   const [flipped, flipCard] = React.useState(false);
   return (
-    <GridRow justify="center">
-      <GridCol justify="center">
-        <Card flipped={flipped} onClick={() => flipCard(!flipped)}>
-          <Front flipped={flipped}>
-            <Star />
-            <Developer>Front end developer</Developer>
-            <Me />
-            <Title>{!flipped && <span>Leiv Fredrik Berge</span>}</Title>
-          </Front>
-          <Backside flipped={flipped}>
-            <FunFact>
-              <iframe
-                title="video"
-                width="400"
-                height="225"
-                src="https://www.youtube.com/embed/TBa1p2YJwzQ"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              <Heading>Have driven a real car in VR</Heading>
-            </FunFact>
-            <Box>
-              {flipped && (
-                <>
-                  <Heading>About me</Heading>
-                  <List>
-                    <ListItem customDot="fire">
-                      Javascript all the things
-                    </ListItem>
-                    <ListItem customDot="fire">React & Node.js</ListItem>
-                    <ListItem customDot="fire">
-                      Wierd mechanical keyboards
-                    </ListItem>
-                  </List>
-                </>
-              )}
-            </Box>
-          </Backside>
-        </Card>
-      </GridCol>
-    </GridRow>
+    <Scale>
+      <GridRow justify="center">
+        <GridCol justify="center">
+          <Card flipped={flipped} onClick={() => flipCard(!flipped)}>
+            <Front flipped={flipped}>
+              <Star />
+              <Developer>Front end developer</Developer>
+              <Me />
+              <Title>{!flipped && <span>Leiv Fredrik Berge</span>}</Title>
+            </Front>
+            <Backside flipped={flipped}>
+              <Box>
+                {flipped && (
+                  <Content>
+                    <Heading>About me</Heading>
+                    <List>
+                      <ListItem customDot="fire">
+                        Javascript all the things
+                      </ListItem>
+                      <ListItem customDot="fire">React & Node.js</ListItem>
+                      <ListItem customDot="fire">
+                        Wierd mechanical keyboards
+                      </ListItem>
+                      <ListItem customDot="fire">Somewhat opinionated</ListItem>
+                    </List>
+                  </Content>
+                )}
+              </Box>
+            </Backside>
+          </Card>
+        </GridCol>
+      </GridRow>
+    </Scale>
   );
 };
 

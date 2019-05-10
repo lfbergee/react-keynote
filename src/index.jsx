@@ -11,11 +11,18 @@ import HamarMeetup from "./slides/HamarMeetup";
 import SlideDeckSelect from "./slides";
 
 const GlobalStyle = createGlobalStyle`
+  html{
+    font-size: 62.5%;
+  }
   body {
     font-family: "Helvetica Neue", "Ubuntu Light", "sans-serif";
     height: 100%;
     overflow: hidden;
     background-color: #090909;
+    font-size: 3.2rem;
+  }
+  h1 {
+    font-size: 6rem;
   }
 `;
 
@@ -38,6 +45,7 @@ const render = () => {
     <AppContainer>
       <>
         <Normalize />
+        <basefont size="32px" />
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyle />
