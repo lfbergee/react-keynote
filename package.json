@@ -2,7 +2,7 @@
   "name": "react-keynote",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lfbergee.github.io/playground",
+  "homepage": "https://lfbergee.github.io/react-keynote",
   "dependencies": {
     "@nearform/react-animation": "^1.0.6",
     "gh-pages": "^2.0.1",

@@ -122,12 +122,12 @@ const Me = styled.div`
 `;
 
 const Scale = styled.div`
-  transform: scale(1.4);
   margin-top: 100px;
 `;
 
 const Content = styled.div`
-  width: 415px;
+  width: 340px;
+  padding: 50px;
 `;
 
 const PlayCard = () => {
@@ -148,16 +148,10 @@ const PlayCard = () => {
                 {flipped && (
                   <Content>
                     <Heading>About me</Heading>
-                    <List>
-                      <ListItem customDot="fire">
-                        Javascript all the things
-                      </ListItem>
-                      <ListItem customDot="fire">React & Node.js</ListItem>
-                      <ListItem customDot="fire">
-                        Wierd mechanical keyboards
-                      </ListItem>
-                      <ListItem customDot="fire">Somewhat opinionated</ListItem>
-                    </List>
+                    <p>Javascript all the things</p>
+                    <p>React & Node.js</p>
+                    <p>Wierd mechanical keyboards</p>
+                    <p>Somewhat opinionated</p>
                   </Content>
                 )}
               </Box>
