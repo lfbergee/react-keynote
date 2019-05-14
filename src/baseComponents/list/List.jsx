@@ -26,6 +26,7 @@ export const List = styled.ul``;
 export const ListItem = styled.li`
   margin-bottom: 24px;
   font-size: 4.2rem;
+  line-height: 7rem;
   list-style: ${props => (props.customDot ? "none" : "initial")};
   &:before {
     content: ${props => (props.customDot ? getDot(props.customDot) : "")};
