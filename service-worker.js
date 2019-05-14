@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-keynote/precache-manifest.b47cb29cf64ddc16b1f5f2135791966b.js"
+  "/react-keynote/precache-manifest.424b101f0ea14992a89db49e6adbdc9e.js"
 );
 
 workbox.clientsClaim();
