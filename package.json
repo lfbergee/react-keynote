@@ -6,7 +6,7 @@
   "dependencies": {
     "@nearform/react-animation": "^1.0.6",
     "gh-pages": "^2.0.1",
-    "immer": "^2.1.0",
+    "immer": "^8.0.1",
     "react": "^16.8.3",
     "react-app-rewire-hot-loader": "^2.0.1",
     "react-app-rewired": "^2.1.0",
