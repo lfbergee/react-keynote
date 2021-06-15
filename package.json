@@ -5,7 +5,7 @@
   "homepage": "https://lfbergee.github.io/react-keynote",
   "dependencies": {
     "@nearform/react-animation": "^1.0.6",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^3.2.1",
     "immer": "^2.1.0",
     "react": "^16.8.3",
     "react-app-rewire-hot-loader": "^2.0.1",
